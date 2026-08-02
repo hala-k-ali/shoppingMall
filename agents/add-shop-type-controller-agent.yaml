@@ -1,0 +1,29 @@
+name: add-shop-type-controller-agent
+description: |
+  Create a plain Java skeleton controller class ShopTypeController under an inferred package
+  and commit it to the feature/add-shop-type-controller-agent branch.
+tasks:
+  - id: create-shop-type-controller
+    run: |
+      # Create the Java file
+      mkdir -p src/main/java/com/halakali/shoppingmall/controller
+      cat > src/main/java/com/halakali/shoppingmall/controller/ShopTypeController.java <<'JAVA'
+      package com.halakali.shoppingmall.controller;
+      
+      /**
+       * Plain Java skeleton controller for ShopType.
+       *
+       * Created by agent: add-shop-type-controller-agent
+       */
+      public class ShopTypeController {
+      
+          /**
+           * Default constructor.
+           */
+          public ShopTypeController() {
+          }
+      
+          // TODO: add methods (list/get/create/update/delete) if/when needed.
+      }
+      JAVA
+    result: created_file
