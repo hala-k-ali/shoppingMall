@@ -1,0 +1,28 @@
+name: main
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+    name: Build and test
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+#      - name: Install Node.js
+#        uses: actions/setup-node@v7
+#        with:
+#          node-version: 24.18.0
+#      - run: npm ci
+#      # Core action code
+#      - run: npm run format # Prettier formats core action code
+#      - run: npm run build # builds core action code into dist/
+#      # All repo
+#      - run: npm run lint # ESLint
+#      - run: npm run format:all:check # Prettier formatting check
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
